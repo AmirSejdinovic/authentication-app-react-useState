@@ -4,6 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import aut from './aut.png';
 //Importing react and method useState
 import React, {useState} from 'react';
+import swal from 'sweetalert';
 
 function App() {
   //Creating varaible and method inside useState react hook
@@ -15,10 +16,10 @@ function App() {
     e.preventDefault();
       //Condition if is right email and password than show succes message
        if(user== 'react@gmail.com' && pass == 123456)
-       alert("Successuful login")
+       swal("Succesful Login","Wllcome ReactJs","success")
        //If is not sucess than show alert of eror
        else
-       alert("Wrong credentials")
+       swal("Wrong Credentials","Please try again","error")
   }
   return (
     <div className="App-header">
